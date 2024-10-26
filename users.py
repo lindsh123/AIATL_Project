@@ -14,11 +14,10 @@ db = client.myDatabase  # Create or get the user database
 users_collection = db["users"]
 
 
-def register_user(username, firstname, lastname, password, email, phone_number, identity, age, race, gender):
+def register_user(username, fullname, password, email, phone_number, identity, age, race, gender):
     user_info = {
         "user":username,
-        "first_name":firstname,
-        "last_name":lastname,
+        "full_name":fullname,
         "password":password,
         "email":email,
         "phone":phone_number,
@@ -32,12 +31,10 @@ def register_user(username, firstname, lastname, password, email, phone_number, 
 
 symptoms_collection = db["symptoms"]
 
-def register_symptoms(symptoms, symptoms_id):
+def register_symptoms(symptoms, user):
     symptoms_info = {
-        "symptoms":symptoms
-        "symptoms_id":symptoms_id
+        "symptoms":symptoms,
+        "user":user
     }
     symptoms_collection.insert_one(symptoms_info)
 
-def call_symptoms(symptoms_id):
-    
