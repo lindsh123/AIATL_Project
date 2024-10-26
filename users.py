@@ -29,12 +29,15 @@ def register_user(username, firstname, lastname, password, email, phone_number, 
     }
     users_collection.insert_one(user_info)
 
-db2 = client.myDatabase
 
-symptoms_collection = db2["symptoms"]
+symptoms_collection = db["symptoms"]
 
-def register_symptoms(symptoms):
+def register_symptoms(symptoms, symptoms_id):
     symptoms_info = {
         "symptoms":symptoms
+        "symptoms_id":symptoms_id
     }
     symptoms_collection.insert_one(symptoms_info)
+
+def call_symptoms(symptoms_id):
+    
