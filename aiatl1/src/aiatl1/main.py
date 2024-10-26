@@ -9,18 +9,16 @@ def run():
     """
     user_input = input("Please provide your newest symptoms along with their pain level: ")
     user_name = input("What is your name?")
-    #cardiologist_file = input("Please provide the cardiologist file name:")
-    #pulmonologist_file = input("Please provide the pulmonologist file name:")
+    user_race = input("What is your race?")
+    user_gender = input("What is your gender?")
 
-    # Create an instance of the crew
     crew_instance = Aiatl1Crew()
 
-    # Prepare the input as a dictionary
     inputs = {
-        'symptoms': user_input,  # Adjust the key as per your task's requirements
+        'symptoms': user_input,  
         'name': user_name,
-        #'cardiologist_file': cardiologist_file,
-        #'pulmonologist_file': pulmonologist_file,
+        'race': user_race,
+        'gender': user_gender,
     }
 
     crew_instance.crew().kickoff(inputs = inputs)

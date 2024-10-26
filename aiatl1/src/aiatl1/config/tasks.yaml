@@ -1,8 +1,8 @@
 diagnosis_task_cardiologist:
   description: >
-    Create possible diagnoses based on the symptoms: {symptoms} for the user, looking at and cross-examining the past medical history.
+    Create possible diagnoses based on the symptoms: {symptoms} for the user, looking at and cross-examining the past medical history. Also write output to specifed file using file writer tool
   expected_output: >
-    A list of possible diagnoses and the rationale for each
+    A list of possible diagnoses and the rationale for each.
   agent: cardiologist
 
 diagnosis_task_pulmonologist:
@@ -21,16 +21,16 @@ diagnosis_task_general_practitioner:
 
 diagnosis_decision:
   description: >
-    Decide between the diagnoses from the different agents to see which makes the most rational sense and is most likely to be true. Include metadata from the previous agents.
+    Decide between the diagnoses from the different agents to see which makes the most rational sense and is most likely to be true. You will read from the files given pulmonologist_analysis.txt and cardiologistt_analysis.txt. Include metadata from the previous agents.
   expected_output: >
     The final diagnosis that is most likely to be true
   agent: diagnosis_decider
 
 diagnosis_dei_customizer:
   description: >
-    Customizes the diagnosis given by the Diagnosis Decider to match the trends associated with their race for that medical diagnosis.  Include metadata from the previous agents.
+    Customizes the diagnosis given by the previous Diagnosis Decider agent to match the trends associated with their race and gender for that medical diagnosis.
   expected_output: >
-    The final diagnosis that incorporates racial concerns and important information
+    The final diagnosis that incorporates racial and gender concerns and important information based on the previous agent's diagnosis
   agent: diagnosis_dei
 
 diagnosis_delivery:

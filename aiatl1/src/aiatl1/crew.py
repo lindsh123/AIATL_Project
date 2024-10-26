@@ -5,11 +5,13 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from crewai import LLM
 from crewai.flow.flow import Flow, and_, listen, start
 from tools.custom_tool import CardioMedicalReportRAG, PulmoMedicalReportRAG
+from crewai_tools import FileWriterTool, FileReadTool	
 
 
+file_writer_tool = FileWriterTool()
+file_reader_tool = FileReadTool()
 
 google_api_key = os.getenv("GOOGLE_API_KEY")
-# Set gemini pro as LLM
 llm = LLM(
     model="gemini/gemini-1.5-flash", verbose=True, temperature=0.9, google_api_key=google_api_key
 )
@@ -18,7 +20,6 @@ llm = LLM(
 class Aiatl1Crew():
     """Aiatl1 crew"""
 
-    # Define doctor agents
     @agent
     def cardiologist(self) -> Agent:
         return Agent(
@@ -64,7 +65,7 @@ class Aiatl1Crew():
             memory = True,
             #allow_delegation = True,
             max_iter = 3,
-            #tools = tools,
+            tools = [file_reader_tool],
         )
     @agent
     def diagnosis_dei(self) -> Agent:
@@ -93,14 +94,17 @@ class Aiatl1Crew():
     # Define each diagnosis task for individual doctors
     @task
     def diagnosis_task_cardiologist(self) -> Task:
+        # This task should produce output that we will use later
         return Task(
-            config=self.tasks_config['diagnosis_task_cardiologist']
+            config=self.tasks_config['diagnosis_task_cardiologist'],
+            output_file='cardiologist_analysis.txt',
         )
 
     @task
     def diagnosis_task_pulmonologist(self) -> Task:
         return Task(
-            config=self.tasks_config['diagnosis_task_pulmonologist']
+            config=self.tasks_config['diagnosis_task_pulmonologist'],
+            output_file='pulmonologist_analysis.txt',
         )
 
     @task
@@ -113,13 +117,15 @@ class Aiatl1Crew():
     @task
     def diagnosis_decision(self) -> Task:
         return Task(
-            config=self.tasks_config['diagnosis_decision']
+            config=self.tasks_config['diagnosis_decision'],
+            tools = FileReadTool(file_paths=['pulmonologist_analysis.txt', 'cardiologist_analysis.txt']),
         )
     
     @task
     def diagnosis_dei_customizer(self) -> Task:
         return Task(
-            config=self.tasks_config['diagnosis_dei_customizer']
+            config=self.tasks_config['diagnosis_dei_customizer'],
+            #tools=[FileReadTool(file_path='Cardiologist.pdf')],
         )
     
 
