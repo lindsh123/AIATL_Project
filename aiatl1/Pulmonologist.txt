@@ -1,0 +1,88 @@
+Pulmonology Medical History
+Patient: Lilah Jackson
+Date: 10/26/2024
+Age: 58
+Gender: Female
+Race: Black
+Chief Complaint
+"Getting winded easily when walking up stairs for the past 3 months"
+History of Present Illness
+
+Progressive dyspnea on exertion for 3 months
+Symptoms worse with humidity and cold air
+Occasional dry cough, especially in mornings
+No hemoptysis
+No chest pain with breathing
+Can walk 1 block before becoming short of breath
+No recent respiratory infections
+No fever or night sweats
+
+Past Medical History
+
+Hypertension
+Type 2 Diabetes
+Hyperlipidemia
+Previous ankle fracture (2015)
+No history of asthma or COPD
+No history of pneumonia or TB
+
+Respiratory Risk Factors
+
+Former smoker (20 pack-year history, quit 10 years ago)
+No occupational exposures
+No known asbestos exposure
+No recent travel
+
+Medications
+
+Metformin 1000mg BID
+Lisinopril 20mg daily
+Atorvastatin 40mg daily
+Aspirin 81mg daily
+No current inhaler use
+
+Social History
+
+Retired teacher (no occupational exposures)
+Lives with spouse in single-story home
+No pets
+No mold exposure
+Moderate alcohol use
+No current tobacco use
+
+Review of Systems
+Respiratory
+
+(+) Exertional dyspnea
+(+) Morning cough
+(-) Hemoptysis
+(-) Pleuritic chest pain
+(-) Wheezing
+(-) Sputum production
+(-) Night sweats
+
+Vital Signs
+
+RR: 18
+O2 Sat: 96% on RA
+BP: 142/88
+HR: 82
+Temperature: 98.6°F
+
+Physical Exam
+
+No use of accessory muscles
+Normal respiratory effort at rest
+Lung fields clear to auscultation
+No wheezing or crackles
+Good air movement throughout
+No chest wall tenderness
+Normal tactile fremitus
+No clubbing of digits
+No cyanosis
+
+Pulmonary Function Tests (if available)
+
+FEV1: Pending
+FVC: Pending
+DLCO: Pending

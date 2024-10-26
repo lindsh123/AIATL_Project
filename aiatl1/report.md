@@ -1,0 +1,7 @@
+Lilah, based on your symptoms and medical history, we're strongly considering a diagnosis of Acute Coronary Syndrome (ACS). This means there's a blockage or narrowing in one of your coronary arteries, which are the arteries that supply blood to your heart. This can lead to chest pain, especially when you exert yourself, and it can get better with rest.  
+
+This is a serious condition, and we need to act quickly to ensure you get the right treatment.  We've done some tests, like your ECG and blood work, and those results, along with your family history of heart disease, and your other risk factors like hypertension, type 2 diabetes, and high cholesterol, all point towards this diagnosis. 
+
+We're still working to determine the specific type of ACS you may have. It could be unstable angina, where the blockage is causing chest pain but hasn't yet caused permanent damage to your heart muscle. Or it could be a heart attack, also known as acute myocardial infarction, where the blockage is so severe that it's causing damage to your heart muscle.
+
+We'll need to do some more tests to figure out exactly what's going on, but it's important to know that we're here to support you every step of the way.  We'll explain everything clearly and answer any questions you may have.
