@@ -1,9 +1,13 @@
 from pymongo import MongoClient
 from bson.binary import Binary
 import os
+from dotenv import find_dotenv, load_dotenv
 
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)
 
-CONNECTION_STRING = "mongodb+srv://stevenzdragons:hALALGUYS@aiatl.zehxy.mongodb.net/?retryWrites=true&w=majority&appName=AIAtl"
+PASSWORD = os.getenv("PASSWORD")
+CONNECTION_STRING = f"mongodb+srv://stevenzdragons:{PASSWORD}@aiatl.zehxy.mongodb.net/?retryWrites=true&w=majority&appName=AIAtl"
 
 client = MongoClient(CONNECTION_STRING)  # Connect to MongoDB Atlas through Steven's key
 db = client.myDatabase  # Create or get the user database
