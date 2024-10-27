@@ -12,30 +12,30 @@ diagnosis_task_pulmonologist:
     A list of possible diagnoses and the rationale for each
   agent: pulmonologist
 
-diagnosis_task_general_practitioner:
+diagnosis_task_neurologist:
   description: >
-    Create possible diagnoses based on the symptoms: {symptoms} for the user.
+    Create possible diagnoses based on the symptoms: {symptoms} for the user, looking at and cross-examining the past medical history.
   expected_output: >
     A list of possible diagnoses and the rationale for each
-  agent: general_practitioner
+  agent: neurologist
 
 diagnosis_decision:
   description: >
-    Decide between the diagnoses from the different agents to see which makes the most rational sense and is most likely to be true. You will read from the files given pulmonologist_analysis.txt and cardiologistt_analysis.txt. Include metadata from the previous agents.
+    Say which doctor should be alerted out of all the different doctors. Decide between all the diagnoses from the different agents to see which makes the most rational sense and is most likely to be true. You will read from the files given pulmonologist_analysis.txt, cardiologist_analysis.txt, and neurologist_analysis.txt. Include metadata from the previous agents.
   expected_output: >
-    The final diagnosis that is most likely to be true
+    The doctor that should be flagged and the final diagnosis that is most likely to be true
   agent: diagnosis_decider
 
 diagnosis_dei_customizer:
   description: >
-    Customizes the diagnosis given by the previous Diagnosis Decider agent to match the trends associated with their race and gender for that medical diagnosis.
+    Customizes the diagnosis given by the previous Diagnosis Decider agent to match the trends associated with their race and gender for that medical diagnosis. Restates which doctor to refer to.
   expected_output: >
     The final diagnosis that incorporates racial and gender concerns and important information based on the previous agent's diagnosis
   agent: diagnosis_dei
 
 diagnosis_delivery:
   description: >
-    Present the final diagnosis to the patient in a supportive and empathetic manner, ensuring the reasoning is clear and accessible. Always refer to the patient with their name.  Include metadata from the previous agents.
+    Tell the patient which doctor they should talk to out of all the doctors. Present the final diagnosis to the patient in a supportive and empathetic manner, ensuring the reasoning is clear and accessible. Always refer to the patient with their name.  Include metadata from the previous agents.
   expected_output: >
-    A list of possible diagnoses and the rationale for each all spelled out
+    The first word should be the doctor that should be flagged. The rest should be a list of possible diagnoses and the rationale for each all spelled out
   agent: diagnosis_deliverer

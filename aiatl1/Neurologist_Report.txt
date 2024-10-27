@@ -1,0 +1,89 @@
+Neurological Medical History
+Patient: Robert Chen
+Date: 10/26/2024
+Age: 45
+Gender: Male
+Chief Complaint
+"Episodes of dizziness and near-fainting with occasional confusion, occurring for past 4 months"
+History of Present Illness
+
+Episodes occur 2-3 times per week
+Each episode lasts 3-5 minutes
+Describes "room spinning" sensation
+Accompanied by:
+
+Light-headedness
+Difficulty focusing eyes
+Occasional confusion during episodes
+Mild headache after episodes
+Slight slurring of speech during episodes
+
+
+No complete loss of consciousness
+No tongue biting or incontinence
+Episodes can occur sitting or standing
+No clear trigger identified
+Reports mild memory issues after episodes
+
+Past Medical History
+
+Migraine (diagnosed 10 years ago)
+Anxiety disorder
+Hypertension (well-controlled)
+Sleep apnea (using CPAP)
+
+Family History
+
+Father: Stroke at age 65
+Mother: Migraines
+Sister: Multiple sclerosis
+
+Medications
+
+Amlodipine 5mg daily
+Propranolol 40mg daily (for migraines)
+Sertraline 50mg daily
+Vitamin D 2000 IU daily
+
+Social History
+
+Software engineer
+Married with 2 children
+No tobacco use
+Occasional alcohol (1-2 drinks/week)
+Regular sleep schedule with CPAP
+High stress job
+
+Review of Systems
+Neurological
+
+(+) Dizziness/vertigo
+(+) Brief confusion episodes
+(+) Post-episode headache
+(+) Occasional speech changes
+(+) Memory concerns
+(-) Seizures
+(-) Focal weakness
+(-) Visual changes
+(-) Numbness/tingling
+
+Vital Signs
+
+BP: 128/78
+HR: 72 regular
+RR: 16
+O2 Sat: 98% on RA
+Temperature: 98.2°F
+
+Physical Exam
+Neurological Examination
+
+Alert and oriented x3
+Normal speech
+Cranial nerves II-XII intact
+Motor strength 5/5 all extremities
+DTRs 2+ and symmetric
+Normal finger-to-nose testing
+Mild unsteadiness with tandem gait
+Negative Romberg test
+No nystagmus at rest

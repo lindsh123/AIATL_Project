@@ -1,0 +1,121 @@
+Pulmonology Medical History
+Patient: Robert Chen
+Date: 10/26/2024
+Age: 45
+Gender: Male
+Chief Complaint
+"Episodes of feeling lightheaded and dizzy with trouble thinking clearly, ongoing for 4 months"
+History of Present Illness
+
+Episodes occur 2-3 times weekly
+Each episode lasts 3-5 minutes
+Associated symptoms:
+
+Mild shortness of breath during episodes
+Feeling lightheaded
+Difficulty concentrating
+Occasional sensation of "not getting enough air"
+
+
+No clear environmental triggers
+No seasonal pattern
+No correlation with specific activities
+Sleep apnea possibly worse recently (CPAP usage data pending)
+
+Past Medical History
+
+Sleep apnea (diagnosed 2 years ago)
+
+Using CPAP, variable compliance
+AHI on diagnosis was 22 events/hour
+
+
+Hypertension
+Anxiety disorder
+Migraine headaches
+
+Sleep History
+
+CPAP prescribed at 10 cm H2O
+Reports average use 5 hours/night
+Occasionally removes mask during night
+Some residual daytime sleepiness
+No morning headaches
+
+Environmental History
+
+No recent travel
+No occupational exposures
+No pets
+No known allergies
+Home HVAC recently serviced
+No mold exposure
+Lives in suburban area
+
+Family History
+
+Father: Stroke age 65, HTN
+Mother: Atrial fibrillation
+No family history of lung disease
+
+Medications
+
+Amlodipine 5mg daily
+Propranolol 40mg daily
+Sertraline 50mg daily
+Vitamin D 2000 IU daily
+
+Social History
+
+Software engineer
+Sedentary lifestyle
+Never smoker
+No vaping
+No marijuana use
+Occasional alcohol
+BMI 27
+
+Review of Systems
+Respiratory
+
+(+) Mild dyspnea during episodes
+(+) Occasional sensation of air hunger
+(-) Chronic cough
+(-) Wheezing
+(-) Chest pain with breathing
+(-) Sputum production
+(-) Hemoptysis
+(-) Exercise limitation from breathing
+
+Vital Signs
+
+BP: 128/78
+HR: 72 regular
+RR: 16
+O2 Sat: 98% on RA
+BMI: 27
+
+Physical Exam
+
+Normal respiratory rate and pattern
+No increased work of breathing
+Lungs clear to auscultation
+No wheezes, rales, or rhonchi
+Good air movement throughout
+Normal vocal fremitus
+No chest wall tenderness
+Normal chest excursion
+No clubbing or cyanosis
+
+Pulmonary Function Tests
+
+FEV1: 95% predicted
+FVC: 98% predicted
+FEV1/FVC: 0.82
+DLCO: 92% predicted
+No significant bronchodilator response
+
+Recent Sleep Study Data
+
+Download from CPAP pending
+Last recorded AHI: 3.2 events/hour on CPAP

@@ -1,0 +1,112 @@
+Cardiology Medical History
+Patient: Robert Chen
+Date: 10/26/2024
+Age: 45
+Gender: Male
+Chief Complaint
+"Episodes of dizziness and feeling confused with occasional lightheadedness for past 4 months"
+History of Present Illness
+
+Episodes occur 2-3 times weekly
+Duration 3-5 minutes each
+Describes feeling:
+
+Lightheaded
+Dizzy
+Confused
+Occasionally unsteady
+
+
+No complete syncope
+Minimal association with exertion
+No clear relationship to position changes
+Denies typical anginal symptoms
+No improvement with rest
+No correlation with meals or time of day
+
+Past Medical History
+
+Hypertension (well-controlled)
+Sleep apnea (on CPAP)
+Anxiety disorder
+Migraine headaches
+
+Family History
+
+Father: Stroke age 65, HTN
+Mother: Atrial fibrillation
+Brother: Anxiety disorder
+
+Cardiovascular Risk Assessment
+
+BP well-controlled on single agent
+Normal lipid panel
+Non-smoker
+BMI 27
+Sedentary lifestyle
+No diabetes
+ASCVD 10-year risk: 4.2%
+
+Medications
+
+Amlodipine 5mg daily
+Propranolol 40mg daily
+Sertraline 50mg daily
+Vitamin D 2000 IU daily
+
+Social History
+
+Software engineer (sedentary job)
+Married with 2 children
+No tobacco use
+Occasional alcohol
+Uses CPAP nightly
+High stress work environment
+
+Review of Systems
+Cardiovascular
+
+(-) Chest pain
+(-) Exertional symptoms
+(-) Peripheral edema
+(-) Orthopnea
+(-) PND
+(-) Palpitations
+(-) True syncope
+(+) Nonspecific lightheadedness
+(+) Episodes of confusion
+
+Vital Signs
+
+BP: 128/78 (both arms, no orthostatic changes)
+HR: 72 regular
+RR: 16
+O2 Sat: 98% on RA
+
+Physical Exam
+
+Regular rate and rhythm
+Normal S1, S2
+No murmurs, rubs, or gallops
+No carotid bruits
+Normal JVP
+No peripheral edema
+Strong, equal peripheral pulses
+Normal capillary refill
+
+Recent Cardiac Testing
+
+ECG: Normal sinus rhythm, no ST-T changes
+24hr Holter: No significant arrhythmias
+
+Average HR: 72
+Minimum HR: 58
+Maximum HR: 98
+
+
+Echocardiogram:
+
+Normal LV size and function
+EF 60%
+Normal valves
+No wall motion abnormalities

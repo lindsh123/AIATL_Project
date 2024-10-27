@@ -2,8 +2,11 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from crewai import Agent, Task, Crew, Process, LLM
 from crew import Aiatl1Crew
+import os
+from dotenv import load_dotenv
 
 def run():
+    load_dotenv()
     """
     Run the crew with user input.
     """
