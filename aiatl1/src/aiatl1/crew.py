@@ -4,17 +4,21 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from crewai import LLM
 from crewai.flow.flow import Flow, and_, listen, start
-from tools.custom_tool import CardioMedicalReportRAG, PulmoMedicalReportRAG
+from tools.custom_tool import CardioMedicalReportRAG, PulmoMedicalReportRAG, NeuroMedicalReportRAG
 from crewai_tools import FileWriterTool, FileReadTool	
 
 
 file_writer_tool = FileWriterTool()
-file_reader_tool = FileReadTool()
-
+file_reader_tool = FileReadTool
+anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
 google_api_key = os.getenv("GOOGLE_API_KEY")
 llm = LLM(
     model="gemini/gemini-1.5-flash", verbose=True, temperature=0.9, google_api_key=google_api_key
 )
+cllm = LLM(
+    model="anthropic/claude-3-5-sonnet-20241022", verbose=True, temperature=0.9, anthropic_api_key=anthropic_api_key
+)
+
 
 @CrewBase
 class Aiatl1Crew():
@@ -45,12 +49,13 @@ class Aiatl1Crew():
         )
 
     @agent
-    def general_practitioner(self) -> Agent:
+    def neurologist(self) -> Agent:
         return Agent(
-            config=self.agents_config['general_practitioner'],
+            config=self.agents_config['neurologist'],
             verbose=True,
             llm=llm,
             memory = True,
+            tools = [NeuroMedicalReportRAG()],
             allow_delegation = False,
             max_iter = 3,
         )
@@ -60,7 +65,7 @@ class Aiatl1Crew():
         return Agent(
             config=self.agents_config['diagnosis_decider'],
             verbose=True,
-            llm=llm,
+            llm=llm, #cllm for claude
             memory = True,
             max_iter = 3,
             tools = [file_reader_tool],
@@ -99,19 +104,20 @@ class Aiatl1Crew():
             config=self.tasks_config['diagnosis_task_pulmonologist'],
             output_file='pulmonologist_analysis.txt',
         )
-
+    
     @task
-    def diagnosis_task_general_practitioner(self) -> Task:
+    def diagnosis_task_neurologist(self) -> Task:
         return Task(
-            config=self.tasks_config['diagnosis_task_general_practitioner']
+            config=self.tasks_config['diagnosis_task_neurologist'],
+            output_file='neurologist_analysis.txt',
         )
-
 
     @task
     def diagnosis_decision(self) -> Task:
         return Task(
             config=self.tasks_config['diagnosis_decision'],
-            tools = FileReadTool(file_paths=['pulmonologist_analysis.txt', 'cardiologist_analysis.txt']),
+            tools = FileReadTool(file_paths=['pulmonologist_analysis.txt', 'cardiologist_analysis.txt','neurologist_analysis.txt']),
+            respect_context_window = True,
         )
     
     @task
@@ -119,8 +125,6 @@ class Aiatl1Crew():
         return Task(
             config=self.tasks_config['diagnosis_dei_customizer'],
         )
-    
-
 
     @task
     def diagnosis_delivery(self) -> Task:
@@ -137,6 +141,7 @@ class Aiatl1Crew():
             tasks=[
                 self.diagnosis_task_cardiologist(), 
                 self.diagnosis_task_pulmonologist(), 
+                self.diagnosis_task_neurologist(), 
                 self.diagnosis_decision(), 
                 self.diagnosis_dei_customizer(), 
                 self.diagnosis_delivery()
