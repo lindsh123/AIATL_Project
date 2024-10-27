@@ -40,7 +40,7 @@ def display_header():
     """,
     unsafe_allow_html=True
 )
-        st.markdown("<div style='text-align: right; font-size: 20px;'>the one-stop shop for chronic illness management.</div>", 
+        st.markdown("<div style='text-align: right; font-size: 20px;'>the one-stop shop for chronic illness management</div>", 
         unsafe_allow_html=True
         )
 

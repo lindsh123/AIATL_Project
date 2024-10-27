@@ -17,9 +17,8 @@ def main():
     st.subheader("Features")
     features = [
         "User-friendly interface for patients and doctors.",
-        "Symptom input for patients via text or speech.",
-        "Potential diagnoses and the doctor that should be notified.",
-        "Alerts sent to the doctors. ",
+        "Symptom input for patients via text.",
+        "Potential diagnoses and alerts send to the doctor that should be notified.",
     ]
 
     for feature in features:

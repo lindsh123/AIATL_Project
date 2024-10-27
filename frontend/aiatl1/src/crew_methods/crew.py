@@ -85,7 +85,7 @@ class Aiatl1Crew():
         return Agent(
             config=self.agents_config['diagnosis_deliverer'],
             verbose=True,
-            llm=llm,
+            llm=cllm,
             memory = True,
             allow_delegation = False,
             max_iter = 3,
