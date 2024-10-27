@@ -40,7 +40,7 @@ def store_pdf(pdf_path, pdf_name, user, classification, description=""):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def retrieve_pdfs(user, save_directory):
+def retrieve_pdfs(user, save_directory, type):
     """
     Retrieves a PDF stored as binary data in MongoDB and saves it to a specified path.
     
@@ -51,15 +51,14 @@ def retrieve_pdfs(user, save_directory):
     #if not os.path.exists(save_directory):
     #    os.makedirs(save_directory)
 
-    
     pdf_docs = documents_collection.find({"user": user})
-    count = 0
+
 
     for pdf_doc in pdf_docs:    
 
         pdf_data = pdf_doc["pdf_file"]
         pdf_class = pdf_doc["classification"]
-        save_path = save_directory + "/" + pdf_class + "/" + f"{user}_{count}.pdf"
+        save_path = save_directory +  "/" + f"{type}.pdf"
         #print(save_path)
         directory = os.path.dirname(save_path)
 
@@ -74,7 +73,7 @@ def retrieve_pdfs(user, save_directory):
         with open(save_path, "wb") as f:
             f.write(pdf_data)
         print(f"PDF '{user}' retrieved and saved to '{save_path}'.")
-        count += 1
+        
     
 
 
@@ -84,6 +83,6 @@ def delete_files_by_name(collection, file_name):
     result = collection.delete_many({"name": file_name})  # Adjust the filter as needed
     print(f"Deleted {result.deleted_count} documents containing files named '{file_name}'.")
 
-#delete_files_by_name(documents_collection, f"Sample PDF")
-#store_pdf("Sample_Report.pdf", "Sample PDF", "StevenZ2", "General")
-#retrieve_pdfs("StevenZ2", "samples")
+delete_files_by_name(documents_collection, f"Sample PDF")
+store_pdf("Sample_Report.pdf", "Sample PDF", "StevenZ2", "Neurologist")
+retrieve_pdfs("StevenZ2", "/workspaces/AIATL_Project/aiatl1/", "Neurologist")
