@@ -53,7 +53,6 @@ class Aiatl1Crew():
             memory = True,
             allow_delegation = False,
             max_iter = 3,
-            #tools = tools,
         )
 
     @agent
@@ -63,7 +62,6 @@ class Aiatl1Crew():
             verbose=True,
             llm=llm,
             memory = True,
-            #allow_delegation = True,
             max_iter = 3,
             tools = [file_reader_tool],
         )
@@ -74,9 +72,7 @@ class Aiatl1Crew():
             verbose=True,
             llm=llm,
             memory = True,
-            #allow_delegation = True,
             max_iter = 3,
-            #tools = tools,
         )
     
     @agent
@@ -88,13 +84,10 @@ class Aiatl1Crew():
             memory = True,
             allow_delegation = False,
             max_iter = 3,
-            #tools = tools,
         )
 
-    # Define each diagnosis task for individual doctors
     @task
     def diagnosis_task_cardiologist(self) -> Task:
-        # This task should produce output that we will use later
         return Task(
             config=self.tasks_config['diagnosis_task_cardiologist'],
             output_file='cardiologist_analysis.txt',
@@ -125,7 +118,6 @@ class Aiatl1Crew():
     def diagnosis_dei_customizer(self) -> Task:
         return Task(
             config=self.tasks_config['diagnosis_dei_customizer'],
-            #tools=[FileReadTool(file_path='Cardiologist.pdf')],
         )
     
 
@@ -134,7 +126,7 @@ class Aiatl1Crew():
     def diagnosis_delivery(self) -> Task:
         return Task(
             config=self.tasks_config['diagnosis_delivery'],
-            output_file='report.md'
+            output_file='report.txt'
         )
 
     @crew
@@ -145,7 +137,6 @@ class Aiatl1Crew():
             tasks=[
                 self.diagnosis_task_cardiologist(), 
                 self.diagnosis_task_pulmonologist(), 
-                #self.diagnosis_task_general_practitioner(), 
                 self.diagnosis_decision(), 
                 self.diagnosis_dei_customizer(), 
                 self.diagnosis_delivery()
