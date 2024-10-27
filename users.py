@@ -38,3 +38,4 @@ def register_symptoms(symptoms, user):
     }
     symptoms_collection.insert_one(symptoms_info)
 
+print(db.list_collection_names())

@@ -16,7 +16,7 @@ doctors_collection = db["doctors"]
 
 def register_doctor(user, doctor_first, doctor_last, email, field):
     doctor_info = {
-        "patient":user,
+        "user":user,
         "first_name": doctor_first,
         "last_name": doctor_last,
         "email":email,
@@ -25,7 +25,7 @@ def register_doctor(user, doctor_first, doctor_last, email, field):
     doctors_collection.insert_one(doctor_info)
 
 def remove_doctor(user, field):
-    result = doctors_collection.delete_one({"patient":user, "field":field})
+    result = doctors_collection.delete_one({"user":user, "field":field})
         
         # Check if a document was deleted
     if result.deleted_count > 0:
@@ -35,7 +35,11 @@ def remove_doctor(user, field):
 
 def find_doctor(user, field):
     doc = doctors_collection.find({"user": user, "field":field})
-    if not doc:
-        return f"You don't have a {field} doctor currently registered."
-    else:
-        return doc["email"]
+    for doc1 in doc:
+        if not doc1:
+            return f"You don't have a {field} doctor currently registered."
+        else:
+            return [doc1["last_name"], doc1["email"]]
+
+#print(find_doctor("a","General"))
+#register_doctor("a","Steven", "Zhou", "szhou390@gatech.edu", "General")
