@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 import os
 from dotenv import find_dotenv, load_dotenv
+from users import users_collection
 
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
@@ -14,15 +15,18 @@ db = client.myDatabase  # Create or get the user database
 doctors_collection = db["doctors"]
 
 
-def register_doctor(user, doctor_first, doctor_last, email, field):
+def register_doctor(user, full_name, email, field, patient):
     doctor_info = {
         "user":user,
-        "first_name": doctor_first,
-        "last_name": doctor_last,
+        "full_name":full_name,
         "email":email,
-        "field":field
+        "field":field,
+        "patient":patient
     }
-    doctors_collection.insert_one(doctor_info)
+    if users_collection.find({"full_name":full_name, "identity":"Doctor"}):
+        doctors_collection.insert_one(doctor_info)
+    else:
+        return "No such doctor exists"
 
 def remove_doctor(user, field):
     result = doctors_collection.delete_one({"user":user, "field":field})
@@ -39,7 +43,9 @@ def find_doctor(user, field):
         if not doc1:
             return f"You don't have a {field} doctor currently registered."
         else:
-            return [doc1["last_name"], doc1["email"]]
+            return [doc1["full_name"], doc1["email"]]
+        
+
 
 #print(find_doctor("a","General"))
-#register_doctor("a","Steven", "Zhou", "szhou390@gatech.edu", "General")
+register_doctor("a","Buzz", "szhou390@gatech.edu", "Cardiologist", "stevenzhou")
