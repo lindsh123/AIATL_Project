@@ -35,7 +35,7 @@ diagnosis_dei_customizer:
 
 diagnosis_delivery:
   description: >
-    Tell the patient which doctor they should talk to out of all the doctors. Present the final diagnosis to the patient in a supportive and empathetic manner, ensuring the reasoning is clear and accessible. Always refer to the patient with their name.  Include metadata from the previous agents.
+    Tell the patient which doctor they should talk to out of all the doctors. Present the final diagnosis to the patient in a supportive and empathetic manner, ensuring the reasoning is clear and accessible. Always refer to the patient with their name.  Include metadata from the previous agents. Mention the racial considerations based on previous agents outputs. In your final response, make sure to relate back to the {symptoms}.
   expected_output: >
     The first word should be the doctor that should be flagged. The rest should be a list of possible diagnoses and the rationale for each all spelled out
   agent: diagnosis_deliverer

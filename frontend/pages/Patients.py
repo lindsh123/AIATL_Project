@@ -23,7 +23,7 @@ def main():
     st.markdown("---")
     st.header("Patients Page")
 
-    
+    open('/Users/lindsayhwang/aiatl/frontend/report.txt', 'w').close()
 
     if "logged_in" in st.session_state and st.session_state["logged_in"]:
         if st.session_state["role"] == "patient":
@@ -83,7 +83,7 @@ def main():
         with open(file_path, "r", encoding="utf-8") as file:
             content = file.read()
         # Display the contents
-        st.text_area("File Contents", content, height=300)
+        st.text_area("Doctor Recommendation and Potential Diagnoses", content, height=300)
     except FileNotFoundError:
         st.error("File not found. Please check the file path.")
     except Exception as e:

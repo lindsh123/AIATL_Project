@@ -1,7 +1,6 @@
 Pulmonology Medical History
 Date: 10/26/2024
 Age: 45
-Gender: Male
 Chief Complaint
 "Episodes of feeling lightheaded and dizzy with trouble thinking clearly, ongoing for 4 months"
 History of Present Illness

@@ -1,7 +1,6 @@
 Cardiology Medical History
 Date: 10/26/2024
 Age: 45
-Gender: Male
 Chief Complaint
 "Episodes of dizziness and feeling confused with occasional lightheadedness for past 4 months"
 History of Present Illness

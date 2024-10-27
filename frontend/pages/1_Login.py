@@ -34,6 +34,12 @@ def main():
                         st.session_state["username"] = username
                         st.session_state["role"] = user["role"]
                         st.rerun()
+                        if user["role"]=="doctor":
+                            speciality=user.get('speciality', None)
+                            if speciality:
+                                st.session_state['speciality']==speciality
+                            else:
+                                st.warning("Doctor's speciality not found")
                     else:
                         st.error("Invalid username or password.")
                 except PyMongoError as e:

@@ -1,7 +1,6 @@
 Neurological Medical History
 Date: 10/26/2024
 Age: 45
-Gender: Male
 Chief Complaint
 "Episodes of dizziness and near-fainting with occasional confusion, occurring for past 4 months"
 History of Present Illness
