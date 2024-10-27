@@ -9,9 +9,8 @@ def main():
     display_header()
 
     st.markdown("---")
-    st.title("Welcome to the Healthcare Management System")
     st.write("""
-        This platform allows patients to input their symptoms and doctors to manage patient information.
+        To get started, register for an account using the Register tab on the left side. 
     """)
 
     # Add an overview or features
@@ -19,7 +18,8 @@ def main():
     features = [
         "User-friendly interface for patients and doctors.",
         "Symptom input for patients via text or speech.",
-        "Comprehensive dashboards for managing healthcare activities.",
+        "Potential diagnoses and the doctor that should be notified.",
+        "Alerts sent to the doctors. ",
     ]
 
     for feature in features:

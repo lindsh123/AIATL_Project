@@ -28,11 +28,21 @@ def display_header():
         logo_path = os.path.join("assets", "logo.png")
         try:
             logo = Image.open(logo_path)
-            st.image(logo, width=100)
+            st.image(logo, width=150)
         except FileNotFoundError:
             st.warning("Logo image not found.")
     with col2:
-        st.title("Healthcare Management System")
+        st.markdown(
+    """
+    <h1 style='text-align: right; font-size: 36px; font-weight: bold;'>
+        medmap.ai
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
+        st.markdown("<div style='text-align: right; font-size: 20px;'>the one-stop shop for chronic illness management.</div>", 
+        unsafe_allow_html=True
+        )
 
 
 def get_current_timestamp():

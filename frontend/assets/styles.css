@@ -1,25 +1,22 @@
-
-.stHeader {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    text-align: center;
+h1 {
+  font-size: 3rem;  /* Bigger title size */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.css-1emrehy.edgvbvh3 {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 24px;
-    cursor: pointer;
+h2 {
+  font-size: 2rem;  /* Bigger subtitle size */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.css-1emrehy.edgvbvh3:hover {
-    background-color: #45a049;
+ul {
+  font-size: 0.9rem;  /* Smaller bullet points */
+  margin-left: 40px;
 }
 
-textarea {
-    border-radius: 5px;
-    border: 1px solid #ccc;
+ul li {
+  line-height: 1.5;   /* Adjust spacing for readability */
 }
-

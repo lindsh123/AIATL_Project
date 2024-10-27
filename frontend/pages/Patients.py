@@ -69,25 +69,24 @@ def main():
                         st.error(
                             "Failed to connect to the database. Please try again later."
                         )
+            file_path = "/Users/lindsayhwang/aiatl/frontend/report.txt"  # Replace with the path to your text file
 
-                        
+            try:
+            # Open the file and read its contents
+                with open(file_path, "r", encoding="utf-8") as file:
+                    content = file.read()
+            # Display the contents
+                st.text_area("Doctor Recommendation and Potential Diagnoses", content, height=300)
+            except FileNotFoundError:
+                st.error("File not found. Please check the file path.")
+            except Exception as e:
+                st.error(f"An error occurred: {e}")             
         else:
             st.error("Access Denied: You do not have permission to view this page.")
     else:
         st.warning("Please log in to access the Patients page.")
     # Specify the path to your text file
-    file_path = "/Users/lindsayhwang/aiatl/frontend/report.txt"  # Replace with the path to your text file
-
-    try:
-        # Open the file and read its contents
-        with open(file_path, "r", encoding="utf-8") as file:
-            content = file.read()
-        # Display the contents
-        st.text_area("Doctor Recommendation and Potential Diagnoses", content, height=300)
-    except FileNotFoundError:
-        st.error("File not found. Please check the file path.")
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
+    
 
 if __name__ == "__main__":
     main()
