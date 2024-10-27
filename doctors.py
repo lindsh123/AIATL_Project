@@ -23,7 +23,7 @@ def register_doctor(user, full_name, email, field, patient):
         "field":field,
         "patient":patient
     }
-    if users_collection.find({"full_name":full_name, "identity":"Doctor"}):
+    if users_collection.find({"full_name":full_name, "identity":"doctor"}):
         doctors_collection.insert_one(doctor_info)
     else:
         return "No such doctor exists"
