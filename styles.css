@@ -1,0 +1,25 @@
+
+.stHeader {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.css-1emrehy.edgvbvh3 {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+
+.css-1emrehy.edgvbvh3:hover {
+    background-color: #45a049;
+}
+
+textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
