@@ -1,6 +1,6 @@
 # medmap.ai
 
-medmap.ai is a transformative platform designed to assist chronically ill patients in managing their health by providing context-aware, predictive diagnoses through a multi-agent Large Language Model (LLM) system. It allows patients to communicate their symptoms and receive tailored responses from virtual specialists, streamlining communication between patients and doctors.
+medmap.ai is a transformative platform designed to assist chronically ill patients in managing their health by providing context-aware, predictive diagnoses through a multi-agent Large Language Model (LLM) system. It allows patients to communicate their symptoms and receive tailored responses from virtual specialists, streamlining communication between patients and doctors. An alert to the most relevant doctors follow this diagnosis. 
 
 ## 🚀 Project Demo
 **medmap.ai** empowers patients to communicate more effectively with doctors by providing a virtual assistant that can offer diagnostic suggestions based on symptoms, medical history, and specialist knowledge.
